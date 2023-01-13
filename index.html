@@ -89,8 +89,8 @@
 								<span class="blc">Software</span>
 								<span class="cd-words-wrapper">
 								  <b class="is-visible text-white-color">Engineer</b>
-								  <b class="text-white-color">Developer</b>
-								  <b class="text-white-color">Designer</b>
+								  <b class="text-white-color mobile-disable">Developer</b>
+								  <b class="text-white-color mobile-disable">Designer</b>
 								</span>
 							</span>
 						</h3>
@@ -711,3 +711,12 @@
 
 </body>
 </html>
+
+<script>
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+        const titles = document.querySelectorAll('.mobile-disable')
+        for (let title of titles) {
+            title.remove();
+        }
+    }
+</script>
