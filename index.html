@@ -85,7 +85,7 @@
 					<div class="edrea_tm_home w-full h-auto clear-both float-left text-center">
 						<h3 class="name text-white-color text-[72px] font-bold uppercase mb-[20px]">Christopher <span class="text-pink-color">Cohen</span></h3>
 						<h3 class="job text-[25px] font-medium text-main-color mb-[40px]">
-							<span class="cd-headline rotate-1"> <!-- ANIMATE TEXT VALUES: zoom, rotate-1, letters type, letters rotate-2, loading-bar, slide, clip, letters rotate-3, letters scale, push,  -->
+							<span id='mobile-disable-span' class="cd-headline rotate-1"> <!-- ANIMATE TEXT VALUES: zoom, rotate-1, letters type, letters rotate-2, loading-bar, slide, clip, letters rotate-3, letters scale, push,  -->
 								<span class="blc">Software</span>
 								<span class="cd-words-wrapper">
 								  <b class="is-visible text-white-color">Engineer</b>
@@ -116,7 +116,7 @@
 							<div class="short w-full float-left mb-[24px] border-dashed border-[rgba(255,255,255,.15)] border-b pb-[30px]">
 								<h3 class="name uppercase mb-[15px] text-[40px] font-bold">Christopher <span class="text-pink-color">Cohen</span></h3>
 								<h3 class="job text-[18px] font-normal text-main-color">
-									<span class="cd-headline rotate-1"> <!-- ANIMATE TEXT VALUES: zoom, rotate-1, letters type, letters rotate-2, loading-bar, slide, clip, letters rotate-3, letters scale, push,  -->
+									<span id='mobile-disable-span' class="cd-headline rotate-1"> <!-- ANIMATE TEXT VALUES: zoom, rotate-1, letters type, letters rotate-2, loading-bar, slide, clip, letters rotate-3, letters scale, push,  -->
 										<span class="blc">Software</span>
 										<span class="cd-words-wrapper">
 										  <b class="is-visible text-white-color font-normal">Engineer</b>
@@ -147,7 +147,7 @@
 												<div class="short w-full float-left">
 													<h3 class="name text-[22px] uppercase mb-[7px]">Christopher <span class="text-pink-color">Cohen</span></h3>
 													<h3 class="job font-normal text-main-color text-[15px]">
-														<span class="cd-headline rotate-1"> <!-- ANIMATE TEXT VALUES: zoom, rotate-1, letters type, letters rotate-2, loading-bar, slide, clip, letters rotate-3, letters scale, push,  -->
+														<span id='mobile-disable-span' class="cd-headline rotate-1"> <!-- ANIMATE TEXT VALUES: zoom, rotate-1, letters type, letters rotate-2, loading-bar, slide, clip, letters rotate-3, letters scale, push,  -->
 															<span class="blc">Software</span>
 															<span class="cd-words-wrapper">
 															  <b class="is-visible text-white-color font-normal">Engineer</b>
@@ -714,6 +714,8 @@
 
 <script>
     if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+        const animation = document.getElementById('mobile-disable-span')
+        animation.classList.remove('rotate-1')
         const titles = document.querySelectorAll('.mobile-disable')
         for (let title of titles) {
             title.remove();
